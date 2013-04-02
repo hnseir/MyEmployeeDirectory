@@ -10,7 +10,12 @@
         return this;
     };
 
-    
+    this.findByName = function() {
+    store.findByName($('.search-key').val(), function(employees) {
+        $('.employee-list').html(HomeView.liTemplate(employees));        
+    });
+    };
+
     this.initialize();
 
 }
