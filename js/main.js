@@ -92,7 +92,7 @@ self = this;
         var self = this;
         this.detailsURL = /^#employees\/(\d{1,})/;
         this.registerEvents();
-        this.store = new MemoryStore(function () {
+        this.store = new WebSqlStore(function () {
             self.showAlert('Hello from Hussam', 'Greetings');
             //$('body').html(new HomeView(self.store).render().el);
             self.route();
